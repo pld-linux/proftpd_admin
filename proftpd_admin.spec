@@ -10,9 +10,9 @@ Source0:	http://dl.sourceforge.net/proftpd-adm/%{name}_v%{version}.tar.gz
 # Source0-md5:	413ee31b000301c5623c5c9a08d8ecfe
 Source1:	%{name}.conf
 URL:		http://proftpd-adm.sourceforge.net/
-Requires:	php-mysql
-Requires:	php
+Requires:	php(mysql)
 Requires:	webserver
+Requires:	webserver(php)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
