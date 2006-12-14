@@ -1,12 +1,12 @@
+# TODO: webapps
 Summary:	Web-based tool written in PHP aimed at managing proFTPd server
 Summary(pl):	Napisany w PHP system do zarz±dzania serwerem proFTPd poprzez interfejs WWW i MySQL
 Name:		proftpd_admin
 Version:	0.9
-%define		_ver v0.9
-Release:	1
+Release:	0.1
 License:	GPL v2
-Group:		Applications
-Source0:	http://dl.sourceforge.net/proftpd-adm/%{name}_%{_ver}.tar.gz
+Group:		Applications/WWW
+Source0:	http://dl.sourceforge.net/proftpd-adm/%{name}_v%{version}.tar.gz
 # Source0-md5:	413ee31b000301c5623c5c9a08d8ecfe
 Source1:	%{name}.conf
 URL:		http://proftpd-adm.sourceforge.net/
@@ -27,12 +27,12 @@ Napisany w PHP system do zarz±dzania serwerem proFTPd poprzez
 interfejs WWW i MySQL.
 
 %prep
-%setup -q -n %{name}_%{_ver}
+%setup -q -n %{name}_v%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_proftpd_admin_dir}/{jscript,misc/{database_structure,howto_install,sample_config,user_script}} \
-$RPM_BUILD_ROOT%{_sysconfdir}/httpd
+	$RPM_BUILD_ROOT%{_sysconfdir}/httpd
 
 install *.php *.xml $RPM_BUILD_ROOT%{_proftpd_admin_dir}
 install COPYING VERSION $RPM_BUILD_ROOT%{_proftpd_admin_dir}
@@ -42,7 +42,7 @@ install misc/howto_install/*.html $RPM_BUILD_ROOT%{_proftpd_admin_dir}/misc/howt
 install misc/sample_config/*.conf $RPM_BUILD_ROOT%{_proftpd_admin_dir}/misc/sample_config
 install misc/user_script/*.sh $RPM_BUILD_ROOT%{_proftpd_admin_dir}/misc/user_script
 
-cp -rf style $RPM_BUILD_ROOT%{_proftpd_admin_dir}/
+cp -rf style $RPM_BUILD_ROOT%{_proftpd_admin_dir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/httpd/%{name}.conf
 
