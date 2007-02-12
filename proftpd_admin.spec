@@ -1,6 +1,6 @@
 # TODO: webapps
 Summary:	Web-based tool written in PHP aimed at managing proFTPd server
-Summary(pl):	Napisany w PHP system do zarz±dzania serwerem proFTPd poprzez interfejs WWW i MySQL
+Summary(pl.UTF-8):   Napisany w PHP system do zarzÄ…dzania serwerem proFTPd poprzez interfejs WWW i MySQL
 Name:		proftpd_admin
 Version:	0.9
 Release:	0.1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Web-based tool written in PHP and MySQL aimed at managing proFTPd
 server.
 
-%description -l pl
-Napisany w PHP system do zarz±dzania serwerem proFTPd poprzez
+%description -l pl.UTF-8
+Napisany w PHP system do zarzÄ…dzania serwerem proFTPd poprzez
 interfejs WWW i MySQL.
 
 %prep
